@@ -1,110 +1,151 @@
 {
     "Oasis": {
-        "Definitely Maybe": [
-            "Rock 'n' Roll Star",
-            "Shakermaker",
-            "Live Forever",
-            "Up In The Sky",
-            "Columbia",
-            "Supersonic",
-            "Bring It On Down",
-            "Cigarettes & Alcohol",
-            "Digsy's Dinner",
-            "Slide Away",
-            "Married With Children"
-        ],
-        "Standing On The Shoulder Of Giants": [
-            "Fuckin' in the Bushes",
-            "Go Let It Out",
-            "Who Feels Love?",
-            "Put Yer Money Where Yer Mouth Is",
-            "Little James",
-            "Gas Panic!",
-            "Where Did It All Go Wrong?",
-            "Sunday Morning Call",
-            "I Can See A Liar",
-            "Roll It Over"
-        ]
+        "Definitely Maybe": {
+            "songs": [
+                "Rock 'n' Roll Star",
+                "Shakermaker",
+                "Live Forever",
+                "Up In The Sky",
+                "Columbia",
+                "Supersonic",
+                "Bring It On Down",
+                "Cigarettes & Alcohol",
+                "Digsy's Dinner",
+                "Slide Away",
+                "Married With Children"
+            ],
+            "rating": 10
+        },
+        "Standing On The Shoulder Of Giants": {
+            "songs": [
+                "Fuckin' in the Bushes",
+                "Go Let It Out",
+                "Who Feels Love?",
+                "Put Yer Money Where Yer Mouth Is",
+                "Little James",
+                "Gas Panic!",
+                "Where Did It All Go Wrong?",
+                "Sunday Morning Call",
+                "I Can See A Liar",
+                "Roll It Over"
+            ],
+            "rating": 8
+        }
     },
     "Pink Floyd": {
-        "The Dark Side of the Moon": [
-            "Speak to Me",
-            "Breathe (In the Air)",
-            "On the Run",
-            "Time",
-            "The Great Gig in the Sky",
-            "Money",
-            "Us and Them",
-            "Any Colour You Like",
-            "Brain Damage",
-            "Eclipse"
-        ]
+        "The Dark Side of the Moon": {
+            "songs": [
+                "Speak to Me",
+                "Breathe (In the Air)",
+                "On the Run",
+                "Time",
+                "The Great Gig in the Sky",
+                "Money",
+                "Us and Them",
+                "Any Colour You Like",
+                "Brain Damage",
+                "Eclipse"
+            ],
+            "rating": 10
+        }
     },
     "The Jam": {
-        "Sound Affects": [
-            "Pretty Green",
-            "Monday",
-            "But I'm Different Now",
-            "Set The House Ablaze",
-            "Start!",
-            "That's Entertainment",
-            "Dream Time",
-            "Man In The Corner Shop",
-            "Music For The Last Couple",
-            "Boy About Town",
-            "Scrape Away"
-        ]
+        "Sound Affects": {
+            "songs": [
+                "Pretty Green",
+                "Monday",
+                "But I'm Different Now",
+                "Set The House Ablaze",
+                "Start!",
+                "That's Entertainment",
+                "Dream Time",
+                "Man In The Corner Shop",
+                "Music For The Last Couple",
+                "Boy About Town",
+                "Scrape Away"
+            ],
+            "rating": 7
+        }
     },
     "Pearl Jam": {
-        "Ten": [
-            "Once",
-            "Even Flow",
-            "Alive",
-            "Why Go",
-            "Black",
-            "Jeremy",
-            "Oceans",
-            "Porch",
-            "Garden",
-            "Deep",
-            "Release"
-        ]
+        "Ten": {
+            "songs": [
+                "Once",
+                "Even Flow",
+                "Alive",
+                "Why Go",
+                "Black",
+                "Jeremy",
+                "Oceans",
+                "Porch",
+                "Garden",
+                "Deep",
+                "Release"
+            ],
+            "rating": 9
+        }
     },
     "Led Zeppelin": {
-        "Led Zeppelin": [
-            "Good Times Bad Times",
-            "Babe I'm Gonna Leave You",
-            "You Shook Me",
-            "Dazed and Confused",
-            "Your Timne Is Gonna Come",
-            "Black Mountain Side",
-            "Communication Breakdown",
-            "I Cant Quit You Baby",
-            "How Many More Times"
-        ]
+        "Led Zeppelin": {
+            "songs": [
+                "Good Times Bad Times",
+                "Babe I'm Gonna Leave You",
+                "You Shook Me",
+                "Dazed and Confused",
+                "Your Time Is Gonna Come",
+                "Black Mountain Side",
+                "Communication Breakdown",
+                "I Can't Quit You Baby",
+                "How Many More Times"
+            ],
+            "rating": 8
+        }
     },
     "Dire Straits": {
-        "Brothers In Arms": [
-            "So Far Away",
-            "Money For Nothing",
-            "Walk Of Life",
-            "Your Latest Trick",
-            "Why Worry",
-            "Ride Across The River",
-            "The Man's Too Strong",
-            "One World",
-            "Brothers In Arms"
-        ],
-        "Communique": [
-            "Once Upon A Time In The West",
-            "News",
-            "Where Do You Think You're Going?",
-            "Communique",
-            "Lady Writer",
-            "Angel Of Mercy",
-            "Portobello Belle",
-            "Single Handed Sailor",
-            "Follow Me Home"
-        ]
+        "Brothers In Arms": {
+            "songs": [
+                "So Far Away",
+                "Money For Nothing",
+                "Walk Of Life",
+                "Your Latest Trick",
+                "Why Worry",
+                "Ride Across The River",
+                "The Man's Too Strong",
+                "One World",
+                "Brothers In Arms"
+            ],
+            "rating": 7
+        },
+        "Communique": {
+            "songs": [
+                "Once Upon A Time In The West",
+                "News",
+                "Where Do You Think You're Going?",
+                "Communique",
+                "Lady Writer",
+                "Angel Of Mercy",
+                "Portobello Belle",
+                "Single Handed Sailor",
+                "Follow Me Home"
+            ],
+            "rating": 7
+        }
+    },
+    "Foo Fighters": {
+        "Your Favorite Toy": {
+            "songs": [
+                "Caught In The Echo",
+                "Of All People",
+                "Window",
+                "Your Favorite Toy",
+                "If You Only Knew",
+                "Spit Shine",
+                "Unconditional",
+                "Child Actor",
+                "Amen, Cavemen",
+                "Asking For A Friend"
+            ],
+            "rating": 7
+        }
     }
 }
