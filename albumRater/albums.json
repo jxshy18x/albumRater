@@ -29,7 +29,7 @@
                 "I Can See A Liar",
                 "Roll It Over"
             ],
-            "rating": 8
+            "rating": 7
         }
     },
     "Pink Floyd": {
@@ -47,6 +47,16 @@
                 "Eclipse"
             ],
             "rating": 10
+        },
+        "Wish You Were Here": {
+            "songs": [
+                "Shine On You Crazy Diamond Pts. 1-6",
+                "Welcome to the Machine",
+                "Have a Cigar",
+                "Wish You Were Here",
+                "Shine On You Crazy Diamond Pts. 6-9"
+            ],
+            "rating": 9
         }
     },
     "The Jam": {
@@ -114,7 +124,7 @@
                 "One World",
                 "Brothers In Arms"
             ],
-            "rating": 7
+            "rating": 8
         },
         "Communique": {
             "songs": [
@@ -128,7 +138,7 @@
                 "Single Handed Sailor",
                 "Follow Me Home"
             ],
-            "rating": 7
+            "rating": 6
         }
     },
     "Foo Fighters": {

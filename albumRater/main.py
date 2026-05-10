@@ -2,55 +2,50 @@ import random as rand
 import json
 import os
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+JSON_PATH = os.path.join(BASE_DIR, "albums.json")
 
-#Functions
 def loadAlbums():
     try:
-        with open("albumRater/albums.json", "r") as f:
+        with open(JSON_PATH, "r") as f:
             return json.load(f)
     except FileNotFoundError:
-        return{}
+        return {}
+    except json.JSONDecodeError:
+        print("albums.json is corrupted.")
+        return {}
+
+def saveAlbums(albums):
+    with open(JSON_PATH, "w") as f:
+        json.dump(albums, f, indent=4)
 
 def addAlbum():
-    print("Remember to check your spelling to ensure the system works as intended!")
+    print("Remember to check your spelling!")
     artistName = input("Enter Artist Name:")
     albumName = input("Enter Album name:")
-
-    #Code to check whether artist exists:
     if artistName not in ratedAlbums:
         ratedAlbums[artistName] = {}
         print(f"New Artist {artistName} created!")
-    
-    #Code to check whether album from artist is already entered:
     if albumName in ratedAlbums[artistName]:
         print(f"{albumName} by {artistName} already exists!")
         return
-    
-    songs  = []
+    songs = []
     songCounter = 0
     songAmount = int(input("How many songs does the album contain?"))
-    
     while songCounter < songAmount:
         song = input("Song: ")
         songs.append(song)
         songCounter += 1
-
     albumRating = int(input("Rate this album (1-10):"))
     while albumRating < 1 or albumRating > 10:
         print("Please enter a number between 1 and 10")
         albumRating = int(input("Rate this album (1-10):"))
-
     ratedAlbums[artistName][albumName] = {
         "songs": songs,
         "rating": albumRating
     }
     saveAlbums(ratedAlbums)
-    print(json.dumps(ratedAlbums, indent=4))
     print(f"'{albumName}' by {artistName} saved!")
-
-def saveAlbums(albums):
-    with open("albumRater/albums.json", "w") as f:
-        json.dump(albums, f, indent=4)
 
 def printAlbums():
     ratedAlbums = loadAlbums()
@@ -62,95 +57,90 @@ def printAlbums():
                 print(f"    - {song}")
     print()
 
-#Edit the information within an album
 def editAlbum():
     ratedAlbums = loadAlbums()
-
-    #Checking artist name exists
     artistName = input("Enter your artist:")
     if artistName not in ratedAlbums:
-        print(f"Artist {artistName}, not found in file.")
+        print(f"Artist {artistName} not found.")
         return
-    
-    #Checking album exists
     albumName = input("Enter album name:")
     if albumName not in ratedAlbums[artistName]:
-        print(f"{albumName} by {artistName} not found in file.")
+        print(f"{albumName} by {artistName} not found.")
         return
-    
     editChoice = int(input("""
-        1: Rename the album
-        2: Rename the artist
-        3: Edit a song title
-        4: Add a song
-        5: Delete a song
-    """))
-        
+  1: Rename the album
+  2: Rename the artist
+  3: Edit a song title
+  4: Add a song
+  5: Delete a song
+"""))
     if editChoice == 1:
-        renameAlbum = input("Enter album name:")
-        ratedAlbums[artistName][renameAlbum] = ratedAlbums[artistName].pop(albumName)
-        print("Album name changed.")
-    
+        newName = input("Enter new album name:")
+        ratedAlbums[artistName][newName] = ratedAlbums[artistName].pop(albumName)
+        print("Album renamed.")
     elif editChoice == 2:
-        renameArtist = input("Enter artist name:")
-        ratedAlbums[renameArtist] = ratedAlbums.pop(artistName)
-    
+        newName = input("Enter new artist name:")
+        ratedAlbums[newName] = ratedAlbums.pop(artistName)
+        print("Artist renamed.")
     elif editChoice == 3:
-        songs = ratedAlbums[artistName][albumName]
+        songs = ratedAlbums[artistName][albumName]["songs"]
         for i, song in enumerate(songs):
-            print(f" {i + 1}: {song}")
+            print(f"  {i+1}: {song}")
         songNum = int(input("Enter song number to edit:")) - 1
         newSong = input("Enter new song name:")
         songs[songNum] = newSong
         print(f"Song updated to {newSong}")
-
     elif editChoice == 4:
-        print("")
-    
+        newSong = input("Enter song to add:")
+        ratedAlbums[artistName][albumName]["songs"].append(newSong)
+        print(f"'{newSong}' added!")
     elif editChoice == 5:
-        print("")
-    
+        songs = ratedAlbums[artistName][albumName]["songs"]
+        for i, song in enumerate(songs):
+            print(f"  {i+1}: {song}")
+        songNum = int(input("Enter song number to delete:")) - 1
+        removed = songs.pop(songNum)
+        print(f"'{removed}' deleted.")
     else:
         print(f"{editChoice} is invalid!")
         return
     saveAlbums(ratedAlbums)
     print("Changes saved!")
 
-#Deletes album at the user's request
 def deleteAlbum():
     print("\n--Make sure to spell your artist correctly--\n")
-    
-    #Checking artist name exists
     artistName = input("Enter your artist:")
     if artistName not in ratedAlbums:
-        print(f"Artist {artistName}, not found in file.")
+        print(f"Artist {artistName} not found.")
         return
-    
-    #Checking album exists
     albumName = input("Enter album name:")
     if albumName not in ratedAlbums[artistName]:
-        print(f"{albumName} by {artistName} not found in file.")
+        print(f"{albumName} by {artistName} not found.")
         return
-    
-    #Ask user to confirm before deletion
-    userConfirm = input(f"Are you sure you would like to delete {albumName} by {artistName}? (y/n)")
+    userConfirm = input(f"Are you sure you want to delete {albumName} by {artistName}? (y/n)")
     if userConfirm.lower() != "y":
-        print("Deleting process stopped")
+        print("Cancelled.")
         return
-    
     del ratedAlbums[artistName][albumName]
-
-    #if artist has no albums left, remove the artist
     if len(ratedAlbums[artistName]) == 0:
         del ratedAlbums[artistName]
-        print(f"Artist: {artistName}, removed due to no logged albums.")
-
+        print(f"Artist {artistName} removed as they have no albums left.")
     saveAlbums(ratedAlbums)
+    print("Album deleted!")
 
-#Song guessing game, guess what album the song is off of!
+def topAlbums():
+    ratedAlbums = loadAlbums()
+    allAlbums = []
+    for artist, albums in ratedAlbums.items():
+        for album, data in albums.items():
+            allAlbums.append((data['rating'], album, artist))
+    allAlbums.sort(reverse=True)
+    print("\n---TOP RATED ALBUMS---\n")
+    for i, (rating, album, artist) in enumerate(allAlbums[:20]):
+        print(f"  {i+1}. {album} by {artist} — {rating}/10")
+
 def guessSong():
     print("")
-
 
 # Main Code:
 ratedAlbums = loadAlbums()
@@ -164,7 +154,7 @@ What features would you like to use?
   3: Edit an album
   4: Delete an album
   5: Play the guessing game
-  6: View top 20 rated albums
+  6: View top rated albums
 """))
 
 if userChoice == 1:
@@ -175,19 +165,9 @@ elif userChoice == 3:
     editAlbum()
 elif userChoice == 4:
     deleteAlbum()
+elif userChoice == 5:
+    guessSong()
+elif userChoice == 6:
+    topAlbums()
 
 print("\n-------SPACER-------\n")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
