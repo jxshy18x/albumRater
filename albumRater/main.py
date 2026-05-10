@@ -128,7 +128,7 @@ def deleteAlbum():
     saveAlbums(ratedAlbums)
     print("Album deleted!")
 
-def topAlbums():
+def albumRanking():
     ratedAlbums = loadAlbums()
     allAlbums = []
     for artist, albums in ratedAlbums.items():
@@ -168,6 +168,6 @@ elif userChoice == 4:
 elif userChoice == 5:
     guessSong()
 elif userChoice == 6:
-    topAlbums()
+    albumRanking()
 
 print("\n-------SPACER-------\n")

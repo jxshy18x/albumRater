@@ -30,6 +30,23 @@
                 "Roll It Over"
             ],
             "rating": 7
+        },
+        "Be Here Now": {
+            "songs": [
+                "D'You Know What I Mean",
+                "My Big Mouth",
+                "Magic Pie",
+                "Stand By Me",
+                "I Hope, I Think, I Know",
+                "The Girl In The Dirty Shirt",
+                "Fade In-Out",
+                "Don't Go Away",
+                "Be Here Now",
+                "All Around The World",
+                "It's Gettin' Better (Man!!)",
+                "All Around The World"
+            ],
+            "rating": 7
         }
     },
     "Pink Floyd": {
@@ -57,6 +74,33 @@
                 "Shine On You Crazy Diamond Pts. 6-9"
             ],
             "rating": 9
+        },
+        "Meddle": {
+            "songs": [
+                "One of These Days",
+                "A Pillow of Winds",
+                "Fearless",
+                "San Tropez",
+                "Seamus",
+                "Echoes"
+            ],
+            "rating": 8
+        },
+        "A Momentary Lapse of Reason": {
+            "songs": [
+                "Signs of Life",
+                "Learning to Fly",
+                "The Dogs of War",
+                "One Slip",
+                "On the Turning Away",
+                "Yet Another Movie",
+                "Round and Around",
+                "A New Machine, Pt. 1",
+                "Terminal Frost",
+                "A New Machine, Pt. 2",
+                "Sorrow"
+            ],
+            "rating": 8
         }
     },
     "The Jam": {
@@ -156,6 +200,147 @@
                 "Asking For A Friend"
             ],
             "rating": 7
+        }
+    },
+    "The Verve": {
+        "Urban Hymns": {
+            "songs": [
+                "Bitter Sweet Symphony",
+                "Sonnet",
+                "The Rolling People",
+                "The Drugs Don't Work",
+                "Catching The Butterfly",
+                "Neon Wilderness",
+                "Space And Time",
+                "Weeping Willow",
+                "Lucky Man",
+                "One Day",
+                "This Time",
+                "Velvet Morning",
+                "Come On/Deep Freeze"
+            ],
+            "rating": 10
+        },
+        "A Northern Soul": {
+            "songs": [
+                "A New Decade",
+                "This Is Music",
+                "On Your Own",
+                "So It Goes",
+                "A Northern Soul",
+                "Brainstorn Interlude",
+                "Drive You Home",
+                "History",
+                "No Knock On My Door",
+                "Life's An Ocean",
+                "Stormy Clouds",
+                "(Reprise)"
+            ],
+            "rating": 6
+        }
+    },
+    "Richard Ashcroft": {
+        "Keys To The World": {
+            "songs": [
+                "Why Not Nothing?",
+                "Music Is Power",
+                "Break The Night With Colour",
+                "Words Just Get In The Way",
+                "Keys To The World",
+                "Sweet Brother Malcom",
+                "Cry Til The Morning",
+                "Why Do Lovers?",
+                "Simple Song",
+                "World Keeps Turning"
+            ],
+            "rating": 9
+        },
+        "Alone With Everybody": {
+            "songs": [
+                "A Song For The Lovers",
+                "I Get My Beat",
+                "Brave New World",
+                "New York",
+                "You On My Mind In My Sleep",
+                "Crazy World",
+                "On A Beach",
+                "Money To Burn",
+                "Slow Was My Heart",
+                "C'mon People (We're Making It Now)",
+                "Everybody"
+            ],
+            "rating": 8
+        }
+    },
+    "Radiohead": {
+        "The Bends": {
+            "songs": [
+                "Planet Telex",
+                "The Bends",
+                "High and Dry",
+                "Fake Plastic Trees",
+                "Bones",
+                "(Nice Dream)",
+                "Just",
+                "My Iron Lung",
+                "Bullet Proof... I Wish I Was",
+                "Black Star",
+                "Sulk",
+                "Street Spirit (Fade Out)"
+            ],
+            "rating": 9
+        }
+    },
+    "Metallica": {
+        "Ride The Lightning": {
+            "songs": [
+                "Fight Fire With Fire",
+                "Ride The Lightning",
+                "For Whom The Bell Tolls",
+                "Fade To Black",
+                "Trapped Under Ice",
+                "Escape",
+                "Creeping Death",
+                "The Call Of Ktulu"
+            ],
+            "rating": 7
+        }
+    },
+    "The Stone Roses": {
+        "The Stone Roses": {
+            "songs": [
+                "I Wanna Be Adored",
+                "She Bangs the Drums",
+                "Waterfall",
+                "Don't Stop",
+                "Bye Bye Bad Man",
+                "Elizabeth My Dear",
+                "(Song for My) Sugar Spun Sister",
+                "Made of Stone",
+                "Shoot You Down",
+                "This Is the One",
+                "I Am the Resurrection",
+                "Fools Gold"
+            ],
+            "rating": 10
+        },
+        "Second Coming": {
+            "songs": [
+                "Breaking Into Heaven",
+                "Driving South",
+                "Ten Storey Love Song",
+                "Daybreak",
+                "Your Star Will Shine",
+                "Starlight To The Man",
+                "Begging You",
+                "Tightrope",
+                "Good Times",
+                "Tears",
+                "How Do You Sleep",
+                "Love Spreads",
+                "Foz"
+            ],
+            "rating": 5
         }
     }
 }
